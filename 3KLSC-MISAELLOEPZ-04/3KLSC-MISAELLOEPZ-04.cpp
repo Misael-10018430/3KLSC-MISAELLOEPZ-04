@@ -1,33 +1,26 @@
-#include <cstdlib>
 #include <iostream>
-
-#define maxf 3
-#define maxc 5
 
 using namespace std;
 
-int main(int argc, char* argv[]) {
-    float a[maxf][maxc];
-    int f, c;
+int main() {
+
+    float matriz[3][5];
 
 
-    for (f = 0; f < maxf; f++) {
-        for (c = 0; c < maxc; c++) {
-            cin >> a[f][c];
+    for (int fila = 0; fila < 3; fila++) {
+        for (int columna = 0; columna < 5; columna++) {
+            cout << "Ingresa el valor en la posición [" << fila << "][" << columna << "]: ";
+            cin >> matriz[fila][columna];
         }
     }
 
 
-    for (f = 0; f < maxf; f++) {
-        for (c = 0; c < maxc; c++) {
-            cout << a[f][c] << " ";
+    for (int fila = 0; fila < 3; fila++) {
+        for (int columna = 0; columna < 5; columna++) {
+            cout << matriz[fila][columna] << "  ";
         }
-        cout << endl;
+        cout << endl << endl;
     }
 
-    system("PAUSE");
-
-    return EXIT_SUCCESS;
-
+    return 0;
 }
-  
